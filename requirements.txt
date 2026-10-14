@@ -1,0 +1,7 @@
+# 仅在「不使用 uv」的时候需要手动安装这些依赖：
+#     python -m pip install -r requirements.txt
+#
+# 用 uv 的话不需要这个文件，pyproject.toml 已经声明了依赖。
+# blcsdk（blivechat 插件 SDK）已经随插件放在 vendor/ 目录里，不需要 pip 安装。
+aiohttp>=3.9
+yarl>=1.9

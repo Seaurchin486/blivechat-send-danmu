@@ -1,0 +1,37 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "blivechat-send-danmu"
+dynamic = ["version"]
+description = "blivechat「发弹幕」插件：手动发送弹幕 + 自动直播弹幕回复"
+requires-python = ">=3.10"
+authors = [{name = "blivechat-send-danmu"}]
+license = {text = "MIT"}
+classifiers = ["Private :: Do Not Upload"]
+dependencies = [
+    "aiohttp>=3.9",
+    "yarl>=1.9",
+]
+
+[dependency-groups]
+dev = [
+    "pytest~=8.0",
+    "pytest-asyncio~=0.24",
+    "pyinstaller~=6.20.0",
+]
+
+[tool.pdm]
+version = {source = "file", path = "plugin.json", pattern = '"version": "([^"]+)"'}
+distribution = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "network: 需要真实网络的测试（会请求 B站接口），用 -m 'not network' 跳过",
+    "integration: 端到端集成测试（会在本地起假的 blivechat 服务）",
+    "smoke: 冒烟测试，会把插件当独立进程真的启动一遍",
+]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

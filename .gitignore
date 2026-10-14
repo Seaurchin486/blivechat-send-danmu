@@ -1,0 +1,26 @@
+# 虚拟环境与构建产物
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pdm-build/
+build/
+dist/
+
+# 测试缓存
+.pytest_cache/
+
+# 插件运行时产生的（config.ini 是用户自己的配置，不要提交；
+# 模板在 data/config.example.ini）
+data/config.ini
+log/
+*.log
+
+# PyInstaller
+*.manifest
+
+# 临时调试文件
+test_verify.py
+verify_fix.py
+FINAL_SUMMARY.md
+问题.md

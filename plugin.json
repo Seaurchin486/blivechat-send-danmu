@@ -1,0 +1,8 @@
+{
+  "name": "发弹幕",
+  "version": "1.0.0",
+  "author": "blivechat-send-danmu",
+  "description": "手动发送弹幕，并按关键词/正则自动回复观众弹幕。自带一个本地网页控制台用于发送弹幕、编辑规则和查看日志。需要：1. blivechat 1.9 以上；2. 在 blivechat 里开启“通过服务器转发消息”选项；3. 已用官方的“登录B站账号”插件登录，或在 data/config.ini 里填写 SESSDATA 和 bili_jct。**请务必使用自己的账号并遵守 B 站社区规则，发送频率过快可能被限制。** 发布地址：https://github.com/xfgryujk/blivechat/discussions",
+  "run": "run.bat",
+  "enabled": true
+}
